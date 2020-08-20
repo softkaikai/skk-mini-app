@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            margin-left: 100px;
+            margin-top: 100px;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="box">
+
+    </div>
+    <script>
+        function getStringArr(str) {
+            const strLength = str.length;
+            const result = [];
+            for (let i = 0; i < strLength; i++) {
+                result.push(str[i]);
+            }
+
+            return result;
+        }
+        let text = '胜多负少广东（省胜）多负少广...';
+        const $box = document.getElementById('box');
+        text = text.replace(/（/g, '<span style="transform: rotate(90deg);display: inline-block;">（</span>')
+        text = text.replace(/）/g, '<span style="transform: rotate(90deg);display: inline-block;">）</span>')
+        console.log('26 text', text);
+        $box.innerHTML = text;
+    </script>
+</body>
+</html>

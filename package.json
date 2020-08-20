@@ -1,0 +1,24 @@
+{
+  "name": "skk-mini-app",
+  "version": "1.0.0",
+  "description": "mini app server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softkaikai/skk-mini-app.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/softkaikai/skk-mini-app/issues"
+  },
+  "homepage": "https://github.com/softkaikai/skk-mini-app#readme",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-static-cache": "^5.1.4",
+    "open": "^7.1.0"
+  }
+}
