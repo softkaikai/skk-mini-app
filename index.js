@@ -1,6 +1,7 @@
 const Koa = require('koa');
 const path = require('path');
 const fs = require('fs');
+const cors = require('koa-cors');
 const koaStaticCache = require('koa-static-cache');
 const open = require('open');
 const app = new Koa();
@@ -8,6 +9,12 @@ const port = 3434;
 const staticUrl = `http://localhost:${port}/public`;
 const staticPath = path.resolve(__dirname, 'static');
 
+
+app.use(cors({
+	origin: function() {
+		return '*'
+	}
+}))
 app.use(koaStaticCache(__dirname + '/static', { // 3.配置静态资源
     // root:'',
     prefix: '/public', // 例如 localhost:3000/public/index.html

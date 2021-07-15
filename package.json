@@ -18,6 +18,7 @@
   "homepage": "https://github.com/softkaikai/skk-mini-app#readme",
   "dependencies": {
     "koa": "^2.13.0",
+    "koa-cors": "0.0.16",
     "koa-static-cache": "^5.1.4",
     "open": "^7.1.0"
   }
